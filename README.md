@@ -23,7 +23,7 @@ $ cp yaqc-cmds-config.toml ~/.config/yaqc-cmds/config.toml
 (in directory corresponding to the system you want to mimic)
 
 ```
-$ sudo socker-compose up --build
+$ sudo docker-compose up --build
 ```
 
 this runs the containers in the foreground, simply exit the process to stop them
