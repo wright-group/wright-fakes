@@ -2,13 +2,17 @@ version: "3.8"
 services:
   fake-continuous-hardware:
     ports:
-      - "38001:38001"
+      - "39876:39876"
+      - "39400:39400"
+      - "39401:39401"
+      - "39501:39501"
+      - "39502:39502"
     build:
       context: .
       dockerfile: ../dockerfiles/fake-continuous-hardware 
   fake-triggered-sensor:
     ports:
-      - "3900:3900"
+      - "38999:38999"
     build:
       context: .
       dockerfile: ../dockerfiles/fake-triggered-sensor 
