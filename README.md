@@ -10,8 +10,23 @@ $ apt install docker.io
 $ apt install docker compose
 ```
 
-## run
+## write appropriate yaqc-cmds config
+
+(in directory corresponding to the system you want to mimic)
 
 ```
-$ sudo ./fake.sh
+$ cp yaqc-cmds-config.toml ~/.config/yaqc-cmds/config.toml
 ```
+
+## start daemons in docker container
+
+(in directory corresponding to the system you want to mimic)
+
+```
+$ sudo socker-compose up --build
+```
+
+this runs the containers in the foreground, simply exit the process to stop them
+
+local ports needed must be open before running this command
+
