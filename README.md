@@ -7,7 +7,7 @@ Currently only tested on Linux.
 
 ```
 $ apt install docker.io
-$ apt install docker compose
+$ apt install docker-compose
 ```
 
 ## write appropriate yaqc-cmds config
