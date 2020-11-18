@@ -1,0 +1,6 @@
+FROM python:3.8-alpine
+RUN apk add --no-cache gcc musl-dev linux-headers
+RUN pip install yaqd-fakes
+RUN mkdir -p root/.config/yaqd/fake-triggered-sensor/
+COPY ./config.toml root/.config/yaqd/fake-triggered-sensor/config.toml
+CMD ["yaqd-fake-triggered-sensor"]
