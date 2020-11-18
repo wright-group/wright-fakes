@@ -1,0 +1,80 @@
+system_name = "fs"
+
+[google_drive]
+enable=false
+port=39200
+
+[sensors]
+
+[sensors.settings]
+ms_wait = 0
+
+[sensors.PCI-6251]
+enable = true
+yaqd_port = 38999
+
+[sensors.ingaas]
+enable = true
+yaqd_port = 38989
+shape=[256]
+
+[hardware]
+
+[hardware.delays.d0]
+enable = true
+yaqd_port = 38500
+native_units = 'ps'
+label = '0'
+factor = -1
+
+[hardware.delays.d1]
+enable = true
+yaqd_port = 38401
+native_units = 'fs'
+label = '13'
+factor = -1
+
+[hardware.delays.d2]
+enable = true
+yaqd_port = 38402
+native_units = 'fs'
+label = '23'
+factor = -1
+
+[hardware.opas.vw0]
+enable = false
+model = 'Virtual'
+native_units = 'nm'
+label = '0'
+index = 0
+
+[hardware.opas.w1]
+enable = true
+yaqd_port = 39301
+native_units = 'nm'
+label = '1'
+shutter_yaqd_port = 39701
+
+[hardware.opas.w2]
+enable = true
+yaqd_port = 39302
+native_units = 'nm'
+label = '2'
+shutter_yaqd_port = 39702
+
+[hardware.spectrometers.wm]
+enable = true
+yaqd_port = 39876
+label = "m"
+native_units = "nm"
+
+[modules]
+scan = true
+tune_test = false
+tune_intensity = false
+tune_setpoint = false
+tune_holistic = false
+motortune = false
+home = false
+poynting_tune = false
+zero_tune = false
