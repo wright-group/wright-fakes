@@ -1,0 +1,7 @@
+[w2_shutter]
+port = 36000
+
+[identifiers]
+closed = 0
+open = 1
+

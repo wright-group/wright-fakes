@@ -1,0 +1,5 @@
+[w1_crystal_2]
+port = 36000
+units = 'deg'
+limits = [-148.75, 201.25]
+velocity = 500.0

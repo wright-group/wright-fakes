@@ -1,0 +1,5 @@
+[w1_mixer_1]
+port = 36000
+units = 'deg'
+limits = [0.0, 345.8333333333333]
+velocity = 500.0

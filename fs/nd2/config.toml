@@ -1,0 +1,7 @@
+[nd2]
+port = 36000
+units = "deg"
+limits = [-inf, inf]
+velocity = 100.0
+
+

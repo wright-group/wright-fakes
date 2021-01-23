@@ -1,0 +1,6 @@
+[w2_delay_2]
+port = 36000
+units = 'deg'
+limits = [-17.917, 332.08299999999997]
+velocity = 500.0
+
