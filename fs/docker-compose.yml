@@ -93,27 +93,29 @@ services:
     ports:
       - 38002:36000
 
-        #w1:
-        #build: ./w1
-        #ports:
-        #- 39301:36000
-        #depends_on:
-        #- w1_crystal_1
-        #- w1_crystal_2
-        #- w1_delay_1
-        #- w1_delay_2
-        #- w1_mixer_1
-        #- w1_mixer_2
-        #- w1_mixer_3
-        #w2:
-        #build: ./w2
-        #ports:
-        #- 39302:36000
-        #depends_on:
-        #- w2_crystal_1
-        #- w2_crystal_2
-        #- w2_delay_1
-        #- w2_delay_2
-        #- w2_mixer_1
-        #- w2_mixer_2
-        #- w2_mixer_3
+  w1:
+    build: ./w1
+    network_mode: "host"
+    ports:
+      - 39301:39301
+    depends_on:
+      - w1_crystal_1
+      - w1_crystal_2
+      - w1_delay_1
+      - w1_delay_2
+      - w1_mixer_1
+      - w1_mixer_2
+      - w1_mixer_3
+  w2:
+    build: ./w2
+    network_mode: "host"
+    ports:
+      - 39302:39302
+    depends_on:
+      - w2_crystal_1
+      - w2_crystal_2
+      - w2_delay_1
+      - w2_delay_2
+      - w2_mixer_1
+      - w2_mixer_2
+      - w2_mixer_3

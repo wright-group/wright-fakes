@@ -1,7 +1,6 @@
 [w1_shutter]
 port = 36000
 
-[identifiers]
+[w1_shutter.identifiers]
 closed = 0
 open = 1
-

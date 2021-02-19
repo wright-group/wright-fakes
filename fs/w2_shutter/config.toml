@@ -1,7 +1,7 @@
 [w2_shutter]
 port = 36000
 
-[identifiers]
+[w2_shutter.identifiers]
 closed = 0
 open = 1
 

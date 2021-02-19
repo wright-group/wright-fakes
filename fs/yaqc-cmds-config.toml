@@ -42,14 +42,14 @@ label = '23'
 factor = -1
 
 [hardware.opas.w1]
-enable = false
+enable = true
 yaqd_port = 39301
 native_units = 'nm'
 label = '1'
 shutter_yaqd_port = 39701
 
 [hardware.opas.w2]
-enable = false
+enable = true
 yaqd_port = 39302
 native_units = 'nm'
 label = '2'

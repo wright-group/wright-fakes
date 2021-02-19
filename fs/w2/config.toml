@@ -1,3 +1,11 @@
-[d0]
-port = 36000
+[w1]
+port = 39302
 
+[w1.setables]
+crystal_1 = 39601
+delay_1 = 39602
+crystal_2 = 39603
+delay_2 = 39604
+mixer_1 = 39605
+mixer_2 = 39606
+mixer_3 = 39607

@@ -1,6 +1,6 @@
-FROM python:3.8-alpine
-RUN apk add --no-cache gcc musl-dev linux-headers
-RUN pip install yaqd-attune
+FROM python:3.8-slim-buster
+RUN pip install yaqd-attune">=2021.2.0" 
 RUN mkdir -p root/.config/yaqd/attune/
 COPY ./config.toml root/.config/yaqd/attune/config.toml
+COPY ./instrument.json root/.local/share/attune/w1/2021/01/20210129T210447.908+0000/instrument.json
 CMD ["yaqd-attune"]
