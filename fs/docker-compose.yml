@@ -92,10 +92,8 @@ services:
     build: ./nd2
     ports:
       - 38002:36000
-
   w1:
     build: ./w1
-    network_mode: "host"
     ports:
       - 39301:39301
     depends_on:
@@ -108,7 +106,6 @@ services:
       - w1_mixer_3
   w2:
     build: ./w2
-    network_mode: "host"
     ports:
       - 39302:39302
     depends_on:
