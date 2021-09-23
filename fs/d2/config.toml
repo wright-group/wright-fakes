@@ -1,5 +1,4 @@
 [d2]
 port = 36000
-limits = [0.0,25.0]
-units = "mm"
-velocity = 10.0
+wrapped_daemon = "d2_stage:36000"
+factor = -2

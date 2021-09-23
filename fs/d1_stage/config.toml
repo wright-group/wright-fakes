@@ -1,0 +1,5 @@
+[d1_stage]
+port = 36000
+limits = [0.0,25.0]
+units = "mm"
+velocity = 10.0

@@ -1,6 +1,5 @@
 [d0]
 port = 36000
-limits = [0.0,300.0]
-units = "mm"
-velocity = 100.0
+wrapped_daemon = "d0_stage:36000"
+factor = -2
 

@@ -2,10 +2,14 @@
 port = 39301
 
 [w1.setables]
-crystal_1 = 39501
-delay_1 = 39502
-crystal_2 = 39503
-delay_2 = 39504
-mixer_1 = 39505
-mixer_2 = 39506
-mixer_3 = 39507
+crystal_1 = "w1_crystal_1:36000"
+delay_1 = "w1_delay_1:36000"
+crystal_2 = "w1_crystal_2:36000"
+delay_2 = "w1_delay_2:36000"
+mixer_1 = "w1_mixer_1:36000"
+mixer_2 = "w1_mixer_2:36000"
+mixer_3 = "w1_mixer_3:36000"
+
+[w1.delays]
+d0 = "d0:36000"
+d1 = "d1:36000"
