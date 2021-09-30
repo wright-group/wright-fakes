@@ -4,14 +4,32 @@ services:
     build: ./d0
     ports:
       - 38500:36000
+    depends_on:
+      - d0_stage
   d1:
     build: ./d1
     ports:
       - 38401:36000
+    depends_on:
+      - d1_stage
   d2:
     build: ./d2
     ports:
       - 38402:36000
+    depends_on:
+      - d2_stage
+  d0_stage:
+    build: ./d0_stage
+    ports:
+      - 38550:36000
+  d1_stage:
+    build: ./d1_stage
+    ports:
+      - 38451:36000
+  d2_stage:
+    build: ./d2_stage
+    ports:
+      - 38452:36000
   wm:
     build: ./wm
     ports:
@@ -95,7 +113,6 @@ services:
 
   w1:
     build: ./w1
-    network_mode: "host"
     ports:
       - 39301:39301
     depends_on:
@@ -106,9 +123,10 @@ services:
       - w1_mixer_1
       - w1_mixer_2
       - w1_mixer_3
+      - d0
+      - d1
   w2:
     build: ./w2
-    network_mode: "host"
     ports:
       - 39302:39302
     depends_on:
@@ -119,3 +137,85 @@ services:
       - w2_mixer_1
       - w2_mixer_2
       - w2_mixer_3
+      - d0
+      - d2
+  wm:
+    build: ./wm
+    ports:
+      - 39876:36000
+  daq:
+    build: ./daq
+    ports:
+      - "38999:36000"
+  w1_crystal_1:
+    build: ./w1_crystal_1
+    ports:
+      - 39501:36000
+  w1_crystal_2:
+    build: ./w1_crystal_2
+    ports:
+      - 39503:36000
+  w1_delay_1:
+    build: ./w1_delay_1
+    ports:
+      - 39502:36000
+  w1_delay_2:
+    build: ./w1_delay_2
+    ports:
+      - 39504:36000
+  w1_mixer_1:
+    build: ./w1_mixer_1
+    ports:
+      - 39505:36000
+  w1_mixer_2:
+    build: ./w1_mixer_2
+    ports:
+      - 39506:36000
+  w1_mixer_3:
+    build: ./w1_mixer_3
+    ports:
+      - 39507:36000
+  w1_shutter:
+    build: ./w1_shutter
+    ports:
+      - 39701:36000
+  nd1:
+    build: ./nd1
+    ports:
+      - 38001:36000
+  w2_crystal_1:
+    build: ./w2_crystal_1
+    ports:
+      - 39601:36000
+  w2_crystal_2:
+    build: ./w2_crystal_2
+    ports:
+      - 39603:36000
+  w2_delay_1:
+    build: ./w2_delay_1
+    ports:
+      - 39602:36000
+  w2_delay_2:
+    build: ./w2_delay_2
+    ports:
+      - 39604:36000
+  w2_mixer_1:
+    build: ./w2_mixer_1
+    ports:
+      - 39605:36000
+  w2_mixer_2:
+    build: ./w2_mixer_2
+    ports:
+      - 39606:36000
+  w2_mixer_3:
+    build: ./w2_mixer_3
+    ports:
+      - 39607:36000
+  w2_shutter:
+    build: ./w2_shutter
+    ports:
+      - 39702:36000
+  nd2:
+    build: ./nd2
+    ports:
+      - 38002:36000
