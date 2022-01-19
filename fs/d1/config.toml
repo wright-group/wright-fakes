@@ -1,4 +1,4 @@
 [d1]
-port = 36000
-wrapped_daemon = "d1_stage:36000"
+port = 38401
+wrapped_daemon = "33.33.33.33:38451"
 factor = -2

@@ -1,7 +1,7 @@
 FROM python:3.8-slim-buster
 RUN apt update
 RUN apt install -y git
-RUN pip install git+https://gitlab.com/yaq/yaqd-attune
+RUN pip install git+https://gitlab.com/yaq/yaqd-attune@44289cc
 RUN mkdir -p root/.config/yaqd/attune/
 COPY ./config.toml root/.config/yaqd/attune/config.toml
 COPY ./instrument.json root/.local/share/attune/w1/2021/01/20210129T210447.908+0000/instrument.json

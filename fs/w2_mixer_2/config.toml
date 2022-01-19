@@ -1,5 +1,5 @@
 [w2_mixer_2]
-port = 36000
+port = 39606
 units = 'deg'
 limits = [0.0, 345.8333333333333]
 velocity = 500.0
