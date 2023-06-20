@@ -5,4 +5,5 @@ RUN pip install yaqd-attune
 RUN mkdir -p root/.config/yaqd/attune/
 COPY ./config.toml root/.config/yaqd/attune/config.toml
 COPY ./instrument.json root/.local/share/attune/w2/2021/01/20210129T210447.908+0000/instrument.json
+COPY ./w2-state.toml root/.local/share/yaqd-state/attune/w2-state.toml
 CMD ["yaqd-attune"]
